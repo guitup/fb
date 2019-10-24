@@ -13,8 +13,8 @@ if ($connected == true){
     if (!empty($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['pwd']) && !empty($_POST['nom']) && !empty($_POST['prenom'])){
         // tout les champs sont rempli
             $email = mysql_real_escape_string($_POST['email']);
-            $pwd = mysql_real_escape_string($_POST['prenom']);
-            $pwd = mysql_real_escape_string($_POST['nom']);
+            $prenom = mysql_real_escape_string($_POST['prenom']);
+            $nom = mysql_real_escape_string($_POST['nom']);
             $pwd = mysql_real_escape_string($_POST['pwd']);
             $date = time();
             echo 'Félicitation, vous venez de vous inscrire<br /> Profitez pleinement de notre application.';
