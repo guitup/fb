@@ -11,14 +11,16 @@ if ($connected == true){
 <?php if ($connected == false){ 
 
     if (!empty($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['pwd']) && !empty($_POST['nom']) && !empty($_POST['prenom'])){
-
+        // tout les champs sont rempli
             $email = mysql_real_escape_string($_POST['email']);
+            $pwd = mysql_real_escape_string($_POST['prenom']);
+            $pwd = mysql_real_escape_string($_POST['nom']);
             $pwd = mysql_real_escape_string($_POST['pwd']);
             $date = time();
-            echo '1';
+            echo 'Félicitation, vous venez de vous inscrire<br /> Profitez pleinement de notre application.';
         }elseif ((isset($_POST['submit'])) && (empty($_POST['submit']) OR empty($_POST['email']) OR empty($_POST['pwd']) OR empty($_POST['nom']) OR empty($_POST['prenom']))){
+        // il y a un ou plusieurs champs non rempli
             $message = 'Vous n\'avez pas rempli tout les champs lors de votre inscription';
-            $date = time();
             echo $message;
         }else{
 
